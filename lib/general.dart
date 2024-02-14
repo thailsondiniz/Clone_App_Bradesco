@@ -7,6 +7,8 @@ class GeneralApp extends StatefulWidget {
   State<GeneralApp> createState() => _GeneralAppState();
 }
 
+bool isVisible = true;
+
 class _GeneralAppState extends State<GeneralApp> {
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,8 @@ class _GeneralAppState extends State<GeneralApp> {
                         width: 5,
                       ),
                       Text(
-                        'Início', style: TextStyle(fontWeight: FontWeight.w500),
+                        'Início',
+                        style: TextStyle(fontWeight: FontWeight.w500),
                       )
                     ],
                   ),
@@ -50,7 +53,8 @@ class _GeneralAppState extends State<GeneralApp> {
                         width: 5,
                       ),
                       Text(
-                        'Meu Perfil', style: TextStyle(fontWeight: FontWeight.w500),
+                        'Meu Perfil',
+                        style: TextStyle(fontWeight: FontWeight.w500),
                       )
                     ],
                   )
@@ -58,10 +62,10 @@ class _GeneralAppState extends State<GeneralApp> {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.only(left:15.0, top:10),
+              padding: EdgeInsets.only(left: 15.0, top: 10),
               child: Text(
                 'Favoritos',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
               ),
             ),
             ListTile(
@@ -69,7 +73,10 @@ class _GeneralAppState extends State<GeneralApp> {
                 Icons.payment,
                 color: Color(0xffCC092F),
               ),
-              title: const Text('Cartões', style: TextStyle(fontWeight: FontWeight.w500),),
+              title: const Text(
+                'Cartões',
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
               onTap: () {},
             ),
             ListTile(
@@ -77,7 +84,10 @@ class _GeneralAppState extends State<GeneralApp> {
                 Icons.monetization_on,
                 color: Color(0xffCC092F),
               ),
-              title: const Text('Empréstimos/ Consignado', style: TextStyle(fontWeight: FontWeight.w500),),
+              title: const Text(
+                'Empréstimos/ Consignado',
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
               onTap: () {},
             ),
             ListTile(
@@ -85,7 +95,10 @@ class _GeneralAppState extends State<GeneralApp> {
                 Icons.show_chart,
                 color: Color(0xffCC092F),
               ),
-              title: const Text('Investimentos', style: TextStyle(fontWeight: FontWeight.w500),),
+              title: const Text(
+                'Investimentos',
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
               onTap: () {},
             ),
             ListTile(
@@ -93,7 +106,10 @@ class _GeneralAppState extends State<GeneralApp> {
                 Icons.account_balance_wallet_outlined,
                 color: Color(0xffCC092F),
               ),
-              title: const Text('Meus bancos', style: TextStyle(fontWeight: FontWeight.w500),),
+              title: const Text(
+                'Meus bancos',
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
               onTap: () {},
             ),
             ListTile(
@@ -101,7 +117,10 @@ class _GeneralAppState extends State<GeneralApp> {
                 Icons.bar_chart_rounded,
                 color: Color(0xffCC092F),
               ),
-              title: const Text('Open Finance', style: TextStyle(fontWeight: FontWeight.w500),),
+              title: const Text(
+                'Open Finance',
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
               onTap: () {},
             ),
             ListTile(
@@ -109,7 +128,10 @@ class _GeneralAppState extends State<GeneralApp> {
                 Icons.qr_code_scanner,
                 color: Color(0xffCC092F),
               ),
-              title: const Text('Pagamentos', style: TextStyle(fontWeight: FontWeight.w500),),
+              title: const Text(
+                'Pagamentos',
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
               onTap: () {},
             ),
             ListTile(
@@ -126,7 +148,10 @@ class _GeneralAppState extends State<GeneralApp> {
                 Icons.text_snippet_outlined,
                 color: Color(0xffCC092F),
               ),
-              title: const Text('Saldo e Extrato', style: TextStyle(fontWeight: FontWeight.w500),),
+              title: const Text(
+                'Saldo e Extrato',
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
               onTap: () {},
             ),
             ListTile(
@@ -134,41 +159,52 @@ class _GeneralAppState extends State<GeneralApp> {
                 Icons.swap_horiz,
                 color: Color(0xffCC092F),
               ),
-              title: const Text('Transferências', style: TextStyle(fontWeight: FontWeight.w500),),
+              title: const Text(
+                'Transferências',
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
               onTap: () {},
             ),
             const Padding(
-              padding: EdgeInsets.only(left:15.0, top:10),
+              padding: EdgeInsets.only(left: 15.0, top: 10),
               child: Text(
                 'Mais Serviços',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
               ),
             ),
-             ListTile(
+            ListTile(
               leading: const Icon(
                 Icons.calendar_month_outlined,
                 color: Color(0xffCC092F),
               ),
-              title: const Text('Agendamentos', style: TextStyle(fontWeight: FontWeight.w500),),
+              title: const Text(
+                'Agendamentos',
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
               onTap: () {},
             ),
-             ListTile(
+            ListTile(
               leading: const Icon(
                 Icons.co_present_rounded,
                 color: Color(0xffCC092F),
               ),
-              title: const Text('Atualização Cadastral', style: TextStyle(fontWeight: FontWeight.w500),),
+              title: const Text(
+                'Atualização Cadastral',
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
               onTap: () {},
             ),
-             ListTile(
+            ListTile(
               leading: const Icon(
                 Icons.storefront,
                 color: Color(0xffCC092F),
               ),
-              title: const Text('Autorização de Parceiros', style: TextStyle(fontWeight: FontWeight.w500),),
+              title: const Text(
+                'Autorização de Parceiros',
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
               onTap: () {},
             ),
-
           ],
         ),
       ),
@@ -241,6 +277,7 @@ class _GeneralAppState extends State<GeneralApp> {
                             ),
                             child: TextField(
                               decoration: InputDecoration(
+                                enabled: false,
                                 prefixIcon: const Icon(
                                   Icons.person_outline,
                                   color: Colors.white,
@@ -290,39 +327,54 @@ class _GeneralAppState extends State<GeneralApp> {
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 18),
                                 ),
-                              const SizedBox(width: 5,),
-                                const Text(
-                                  '8.493,00',
-                                  style: TextStyle(
+                                const SizedBox(
+                                  width: 5,
+                                ),
+                                 Text(
+                                  isVisible ? '8.493,00' : '●●●●●●',
+                                  style: const TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18),
                                 ),
                                 IconButton(
-                                    onPressed: () {},
-                                    icon: const Icon(
-                                      Icons.visibility_off_outlined,
-                                      color: Colors.white,
-                                    ))
+                                  onPressed: () {
+                                    setState(() {
+                                      isVisible = !isVisible;
+                                    });
+                                  },
+                                  icon: Icon(
+                                    isVisible ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+                                    color: Colors.white,
+                                  ),
+                                )
                               ],
                             ),
                             Container(
-                              decoration: const BoxDecoration(
-                                  border: Border(
-                                      bottom: BorderSide(color: Colors.white))),
-                              child: const Row(
-                                children: [
-                                  SizedBox(width: 2,),
-                                   Text(
-                                'Ver extrato',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 18),
-                              ),
-                              SizedBox(width: 5,),
-                              Icon(Icons.arrow_forward_ios_rounded, color: Colors.white, size: 18,)
-                                ],
-                              )
-                            )
+                                decoration: const BoxDecoration(
+                                    border: Border(
+                                        bottom:
+                                            BorderSide(color: Colors.white))),
+                                child: const Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 2,
+                                    ),
+                                    Text(
+                                      'Ver extrato',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 18),
+                                    ),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Icon(
+                                      Icons.arrow_forward_ios_rounded,
+                                      color: Colors.white,
+                                      size: 18,
+                                    )
+                                  ],
+                                ))
                           ],
                         ),
                       ),
