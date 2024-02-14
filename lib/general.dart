@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bradesco_app/pages/cartoes.dart';
+import 'package:flutter_bradesco_app/pages/transferencias.dart';
 
 class GeneralApp extends StatefulWidget {
   const GeneralApp({super.key});
@@ -330,7 +332,7 @@ class _GeneralAppState extends State<GeneralApp> {
                                 const SizedBox(
                                   width: 5,
                                 ),
-                                 Text(
+                                Text(
                                   isVisible ? '8.493,00' : '●●●●●●',
                                   style: const TextStyle(
                                       color: Colors.white,
@@ -344,7 +346,9 @@ class _GeneralAppState extends State<GeneralApp> {
                                     });
                                   },
                                   icon: Icon(
-                                    isVisible ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+                                    isVisible
+                                        ? Icons.visibility_off_outlined
+                                        : Icons.visibility_outlined,
                                     color: Colors.white,
                                   ),
                                 )
@@ -550,33 +554,42 @@ class _GeneralAppState extends State<GeneralApp> {
               spacing: 15.0, // gap between adjacent chips
               runSpacing: 15.0, // gap between lines
               children: <Widget>[
-                Container(
-                    height: 90,
-                    width: 170,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.white,
-                    ),
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Icon(
-                          Icons.swap_horiz,
-                          size: 25,
-                          color: Color(0xffCC092F),
-                        ),
-                        SizedBox(
-                          width: 7,
-                        ),
-                        Text(
-                          'Transfêrencias',
-                          style: TextStyle(fontSize: 15),
-                        ),
-                      ],
-                    )),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Transferencia()),
+                    );
+                  },
+                  child: Container(
+                      height: 90,
+                      width: 170,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                      ),
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Icon(
+                            Icons.swap_horiz,
+                            size: 25,
+                            color: Color(0xffCC092F),
+                          ),
+                          SizedBox(
+                            width: 7,
+                          ),
+                          Text(
+                            'Transfêrencias',
+                            style: TextStyle(fontSize: 15),
+                          ),
+                        ],
+                      )),
+                ),
                 Container(
                     height: 90,
                     width: 170,
@@ -604,33 +617,42 @@ class _GeneralAppState extends State<GeneralApp> {
                         )
                       ],
                     )),
-                Container(
-                    height: 90,
-                    width: 170,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.white,
-                    ),
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Icon(
-                          Icons.credit_card,
-                          size: 25,
-                          color: Color(0xffCC092F),
-                        ),
-                        SizedBox(
-                          width: 7,
-                        ),
-                        Text(
-                          'Cartões',
-                          style: TextStyle(fontSize: 15),
-                        ),
-                      ],
-                    )),
+                InkWell(
+                  onTap: () {
+                     Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Cartoes()),
+                    );
+                  },
+                  child: Container(
+                      height: 90,
+                      width: 170,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                      ),
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Icon(
+                            Icons.credit_card,
+                            size: 25,
+                            color: Color(0xffCC092F),
+                          ),
+                          SizedBox(
+                            width: 7,
+                          ),
+                          Text(
+                            'Cartões',
+                            style: TextStyle(fontSize: 15),
+                          ),
+                        ],
+                      )),
+                ),
                 Container(
                     height: 90,
                     width: 170,
@@ -729,10 +751,12 @@ class _GeneralAppState extends State<GeneralApp> {
                     padding: const EdgeInsets.all(10),
                     width: 60,
                     decoration: const BoxDecoration(
-                        color: Color(0xffCC092F),
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(10),
-                            bottomLeft: Radius.circular(10))),
+                      color: Color(0xffCC092F),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        bottomLeft: Radius.circular(10),
+                      ),
+                    ),
                     child: Image.asset(
                       'lib/img/pix.png',
                       color: Colors.white,
