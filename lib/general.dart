@@ -208,6 +208,7 @@ class _GeneralAppState extends State<GeneralApp> {
         ),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Stack(
             children: [
@@ -244,7 +245,7 @@ class _GeneralAppState extends State<GeneralApp> {
                                   Icons.person_outline,
                                   color: Colors.white,
                                 ),
-                                hintText: 'Olá, Ana Cristina',
+                                hintText: 'Olá, Pessoa',
                                 hintStyle: const TextStyle(
                                   color: Colors.white,
                                   fontSize: 18,
@@ -289,8 +290,9 @@ class _GeneralAppState extends State<GeneralApp> {
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 18),
                                 ),
+                              const SizedBox(width: 5,),
                                 const Text(
-                                  '18.493,00',
+                                  '8.493,00',
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
@@ -308,11 +310,18 @@ class _GeneralAppState extends State<GeneralApp> {
                               decoration: const BoxDecoration(
                                   border: Border(
                                       bottom: BorderSide(color: Colors.white))),
-                              child: const Text(
+                              child: const Row(
+                                children: [
+                                  SizedBox(width: 2,),
+                                   Text(
                                 'Ver extrato',
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 18),
                               ),
+                              SizedBox(width: 5,),
+                              Icon(Icons.arrow_forward_ios_rounded, color: Colors.white, size: 18,)
+                                ],
+                              )
                             )
                           ],
                         ),
